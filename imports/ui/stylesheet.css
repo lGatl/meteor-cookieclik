@@ -1,0 +1,180 @@
+
+@keyframes slidein {
+  from {
+  	opacity:1;
+    		  }
+
+  to {
+    	top:0;
+    	left:32%;
+    	opacity:0;
+  }
+}
+
+
+html{
+	margin: 0;
+	padding: 0;
+	height:100%;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	height: calc(100% - 80px);
+		overflow: hidden;
+}
+
+header{
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	background-color: rgba(200,200,200,1);
+	text-align: center;
+	vertical-align: center;
+}
+header h1{
+	margin:0;
+	font-size: 3em;
+}
+
+.sections{
+	height: 100%;
+}
+
+.section{
+	display:inline-block;
+        float: left;
+	height:100%;
+	width: calc(100% / 3);
+}
+
+#gauche{background-color: rgba(50,200,200,1);
+}
+
+#milieu{
+	background-color: rgba(200,50,200,1);
+	display:block;
+}
+
+#droite{
+	background-color: rgba(200,200,50,1);
+	overflow: auto;
+}
+
+
+.bout{
+
+	padding: 3%;
+	height: 4em;
+	line-height: 4em;
+	width:100%;
+	background: rgba(100,90,20,0.8);
+	border-bottom: 2px dotted rgba(150,140,20,0.7);
+	cursor:pointer;
+	color:(30,30,30,0.8);
+	vertical-align: center;
+}
+.bout img{
+
+	overflow: auto;
+	height:100%;
+
+	float: left;
+
+
+}
+.disabled{
+	opacity: 0.4;
+cursor:default;
+pointer-events:none;
+}
+.invisible{
+	opacity: 0;
+}
+.bout:hover{
+	background: rgba(100,90,20,0.9);
+	color:(30,30,30,0.9);
+
+}
+
+
+#cookie{
+
+	border-radius:50%;
+	background-size: contain;
+	font-size: 4em;
+   	}
+
+#haut{
+	font-size: 2.5em;
+	width: 100%;
+	min-width:100%;
+}
+
+.geph{
+	position: fixed;
+	color:rgba(255,215,0,0.9);
+	text-shadow: 1px 1px 1px rgba(90,90,90,0.8);
+	font-size: 1.5em;
+	font-weight: bold;
+	z-index: 10;
+	pointer-events:none;
+
+	animation-duration: 3s;
+  	animation-name: slidein;
+}
+.bulle{
+	pointer-events:none;
+	max-width:200px;
+	position: fixed;
+	background: rgba(230,190,0,0.5);
+	padding: 2px;
+	z-index: 10;
+
+}
+
+
+.relach{
+	background: url(cookie.png) center no-repeat;
+}
+.enfonc{
+	background: url(cookie1.png) center no-repeat;
+}
+
+.innact{
+	background-color: rgba(150,150,150,0.9);
+}
+
+#haut,#cookie{
+
+	color:white;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+body, #cookie {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+cursor:default;
+
+}
+@media screen and (max-width: 500px)
+{
+	 header h1{
+	   	font-size: 1.5em;
+	   }
+
+	   #milieu{
+		display: none;
+	}
+	.section{
+
+	width: calc(100% / 2);
+}
+}

@@ -1,0 +1,12 @@
+<template name="droite">
+	<div class="section" id="droite">
+		{{  #each storeElements }}
+			{{> element}}
+		{{/each}}
+	</div>
+ </template>
+
+<template name="element">
+	<div class="bout {{isDisabled(price)}} {{isVisible(price)}}">
+	<img src="{{icon}}" alt=""><span >{{titre}} ({{price}})</span ></div>
+</template>
